@@ -68,14 +68,8 @@ async def wow(msg): await gif_command(msg, "wow")
 @bot.command()
 async def confused(msg): await gif_command(msg, "confused")
 
-@bot.command()
-async def cat(msg):
-    await small_info(msg_count, msg)
-    
-    folder = discord.Embed(title = "good cat...", color = discord.Color.blue())
-    folder.set_image(url = 'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif')
-
-    await msg.send(embed = folder)
+@bot.command(aliases = ['working', 'lookbusy'])
+async def work(msg): await gif_command(msg, "work")
 
 # Run the bot
 bot.run(token)
