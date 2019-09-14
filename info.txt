@@ -1,3 +1,4 @@
 token = NjE0ODc3NjMyMTYwNTk2MDY4.XWF3dg.SjV2sWrBEOLUmguJKsjizZqNtpo
 client id = 614877632160596068
 invite link = https://discordapp.com/oauth2/authorize?client_id=614877632160596068&scope=bot
+actual invite link = https://discordapp.com/api/oauth2/authorize?client_id=614877632160596068&permissions=8&scope=bot

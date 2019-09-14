@@ -26,9 +26,7 @@ async def help(msg):
     folder.add_field(name = "help", value = "This view", inline = False)
     folder.add_field(name = "info", value = "Info about the bot", inline = False)
     folder.add_field(name = "ping", value = "Ping Pong", inline = False)
-    folder.add_field(name = "boi",  value = "boii gifs", inline = False)
-    folder.add_field(name = "wtf",  value = "wtf? gifs", inline = False)
-
+    folder.add_field(name = "GIF Command List",  value = "boi, wtf, wow, confused, work, stare, hello, dance, sorry, scared, kirby", inline = False)
     await msg.send(embed = folder)
 
 @bot.command()
@@ -70,6 +68,24 @@ async def confused(msg): await gif_command(msg, "confused")
 
 @bot.command(aliases = ['working', 'lookbusy'])
 async def work(msg): await gif_command(msg, "work")
+
+@bot.command()
+async def stare(msg): await gif_command(msg, "stare")
+
+@bot.command(aliases = ['hi'])
+async def hello(msg): await gif_command(msg, "hello")
+
+@bot.command()
+async def dance(msg): await gif_command(msg, "dance")
+
+@bot.command(aliases = ['oksorry'])
+async def sorry(msg): await gif_command(msg, "sorry")
+
+@bot.command()
+async def scared(msg): await gif_command(msg, "scared")
+
+@bot.command(aliases = ['kirbies'])
+async def kirby(msg): await gif_command(msg, "kirby")
 
 # Run the bot
 bot.run(token)
