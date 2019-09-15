@@ -87,5 +87,8 @@ async def scared(msg): await gif_command(msg, "scared")
 @bot.command(aliases = ['kirbies'])
 async def kirby(msg): await gif_command(msg, "kirby")
 
+@bot.command(aliases = ['gay', 'gayee', 'gey'])
+async def thatsgay(msg): await gif_command(msg, "thatsgay")
+
 # Run the bot
 bot.run(token)
