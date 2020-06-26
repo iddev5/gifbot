@@ -4,7 +4,7 @@ from discord.ext import commands
 
 from core import * 
 
-token = 'NjE0ODc3NjMyMTYwNTk2MDY4.XWF3dg.SjV2sWrBEOLUmguJKsjizZqNtpo'
+token = 'insert-token-here'
 VERSION = '0.0.4'
 
 bot = commands.Bot(command_prefix = 'gg.')
@@ -12,7 +12,7 @@ bot = commands.Bot(command_prefix = 'gg.')
 # Events
 @bot.event
 async def on_ready():
-    print(bot.user.name + " - Copyright 2019 Ayush Bardhan Tripathy")
+    #print(bot.user.name + " - Copyright 2019 Ayush Bardhan Tripathy")
     print("Running on discord.py: ", discord.__version__)
     await bot.change_presence(activity = discord.Game(name = "Searching for awesome gifs..."))
 
@@ -29,24 +29,24 @@ async def help(msg):
     folder.add_field(name = "GIF Command List",  value = "boi, wtf, wow, confused, work, stare, hello, dance, sorry, scared, kirby", inline = False)
     await msg.send(embed = folder)
 
-@bot.command()
-async def info(msg):
-    folder = discord.Embed(title = "gifbot - Info", type = "rich", color = 0xeee657)
-    
-    folder.add_field(name = "Info", value = "A simple bot which has gifs for every situation", inline = False)
-    folder.add_field(name = "Author", value = "I dont have a nickname#0313")
-    folder.add_field(name = "Twitter", value = "@AyushGameDev")
-    folder.add_field(name = "Server Count", value = f"{len(bot.guilds)}")
-    folder.add_field(name = "Discord", value = "https://discord.gg/A9dTbdG")
-    folder.add_field(name = "Invite", value = "<tba>")
-    folder.add_field(name = "Website", value = "<tba>")
-    folder.add_field(name = "Donate", value = "<tba>")
-    folder.add_field(name = "Library", value = "discord.py")
-    folder.add_field(name = "Version", value = "{}".format(VERSION))
-    folder.add_field(name = "Other", value = "If you want to give feedback, report bug, send gifs or request/suggest features?\nDM me in Discord or contact through Twitter.", inline = False)
-    folder.add_field(name = "Legal", value = "All the gifs used in this bot are the preperty of their respective owners.", inline = False)
-
-    await msg.send(embed = folder)
+#@bot.command()
+#async def info(msg):
+#    folder = discord.Embed(title = "gifbot - Info", type = "rich", color = 0xeee657)
+#    
+#    folder.add_field(name = "Info", value = "A simple bot which has gifs for every situation", inline = False)
+#    folder.add_field(name = "Author", value = "I dont have a nickname#0313")
+#    folder.add_field(name = "Twitter", value = "@AyushGameDev")
+#    folder.add_field(name = "Server Count", value = f"{len(bot.guilds)}")
+#    folder.add_field(name = "Discord", value = "https://discord.gg/A9dTbdG")
+#    folder.add_field(name = "Invite", value = "<tba>")
+#    folder.add_field(name = "Website", value = "<tba>")
+#    folder.add_field(name = "Donate", value = "<tba>")
+#    folder.add_field(name = "Library", value = "discord.py")
+#    folder.add_field(name = "Version", value = "{}".format(VERSION))
+#    folder.add_field(name = "Other", value = "If you want to give feedback, report bug, send gifs or request/suggest features?\nDM me in Discord or contact through Twitter.", inline = False)
+#    folder.add_field(name = "Legal", value = "All the gifs used in this bot are the preperty of their respective owners.", inline = False)
+#
+#    await msg.send(embed = folder)
 
 @bot.command(name = 'ping', aliases = ['pong'])
 async def ping(msg):
